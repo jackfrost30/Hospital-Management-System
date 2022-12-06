@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="POST">
+        <label for="PA_ID">FOR PA_ID:</label>
+        <select id="PA_ID" name='PA_ID'>
+        {% for x in PA_ID %}
+        <option value="{{x[0]}}">{{x[0]}}</option>
+        {% endfor %}
+        </select> <br> <br>
+        <label for="DISCHARGED_DATE">DISCHARGED DATE(Please enter in DD-MMM-YY):</label>
+        <input type="text" id="DISCHARGED_DATE" name="DISCHARGED_DATE"><br><br>
+
+
+        <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

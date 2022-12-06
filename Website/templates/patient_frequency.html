@@ -1,0 +1,117 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+            messages %} {% for category, message in messages %} {% if category ==
+            'error' %}
+            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% else %}
+            <div class="alert alert-success alter-dismissable fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endif %} {% endfor %} {% endif %} {% endwith %}
+            <br><br><br>
+
+        <form method="POST">
+            <label for="Start Date">START DATE:</label>
+            <select id="S_DATE" name='S_DATE'>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            </select> <br> <br>
+            <label for="END Date">END DATE:</label>
+            <select id="E_DATE" name='E_DATE'>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            </select> <br> <br>
+        <label for="Month">MONTH:</label>
+            <select id="MONTH" name='month'>
+            <option value="JAN">JAN</option>
+            <option value="FEB">FEB</option>
+            <option value="MAR">MAR</option>
+            <option value="APR">APR</option>
+            <option value="MAY">MAY</option>
+            <option value="JUN">JUN</option>
+            <option value="JUL">JUL</option>
+            <option value="AUG">AUG</option>
+            <option value="SEP">SEP</option>
+            <option value="OCT">OCT</option>
+            <option value="NOV">NOV</option>
+            <option value="DEC">DEC</option>
+            </select> <br> <br>
+                <label for="YEAR">YEAR:</label>
+                    <select id="YEAR" name='year'>
+                    {% for x in data%}
+                    <option value="{{x[0]}}">{{x[0]}}</option>
+                    {% endfor %}
+                    </select> <br> <br>
+
+
+        <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

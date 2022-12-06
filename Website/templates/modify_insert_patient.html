@@ -1,0 +1,45 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="POST">
+        <label for="Hname">Name:</label>
+        <input type="text" id="HNAME" name="Hname"><br><br>
+        <label for="Mname">Middle Name:</label>
+        <input type="text" id="MNAME" name="Mname"><br><br>
+        <label for="Lname">Last Name:</label>
+        <input type="text" id="LNAME" name="Lname"><br><br>
+        <label for="Address">Address:</label>
+        <input type="text" id="ADDRESS" name="Address"><br><br>
+        <label for="Gender">Gender:</label>
+            <select id="GENDER" name='Gender'>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Non-binary">Non-binary</option>
+            <option value="Bigender">Bigender</option>
+            <option value="Other">Other</option>
+            </select> <br> <br>
+        <label for="Bdate">Bdate(Please enter in DD-MMM-YY):</label>
+        <input type="text" id="BDATE" name="Bdate"><br><br>
+
+        <label for="Hospital">Hospital Admitted:</label>
+            <select id="HID" name='HID'>
+            {% for id in TEMP_HID%}
+            <option value="{{id[0]}}">{{id[0]}}</option>
+            {% endfor %}
+            </select> <br> <br>
+    
+        <label for="Ph_no">Phone number:</label>
+        <input type="text" id="PH_NO" name="Ph_no"><br><br>
+        <label for="AILMENT">AILMENT:</label>
+        <input type="text" id="AILMENT" name="AILMENT"><br><br>
+        <label for="S_DATE">Admitted Date(Please enter in DD-MMM-YY):</label>
+        <input type="text" id="S_DATE" name="S_DATE"><br><br>
+        <label for="E_DATE">Discharged Date(Please enter in DD-MMM-YY; Leave if not applicable):</label>
+        <input type="text" id="E_DATE" name="E_DATE"><br><br>
+
+
+        <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

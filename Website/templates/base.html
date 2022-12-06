@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/button.css') }}">
+    <title>Home</title>
+</head>
+
+
+
+<body>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <br><br><br>
+
+    
+  <form action="/create" method="POST">
+    <button class="cybr-btn">
+        Create Tables<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+      </button>
+    </form>
+    <br> <br>
+    <form action="/insert" method="POST">
+      <button class="cybr-btn">
+          Insert Data<span aria-hidden>_</span>
+          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+          <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
+      </form>
+      <br> <br>
+
+  <form action="Display.html">
+    <button class="cybr-btn">
+        Display Contents<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+      </button>
+    </form>
+    <br> <br>
+    <form action="Modify.html">
+      <button class="cybr-btn">
+        Modify Data<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+      </button>
+    </form>
+    <br> <br>
+    <form action="Reports.html">
+      <button class="cybr-btn">
+        Reports<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+      </button>
+    </form>
+    <br> <br>
+    <form action="/drop" method="POST">
+      <button class="cybr-btn">
+          Drop Tables<span aria-hidden>_</span>
+          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+          <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
+      </form>
+
+  </body>
+</html>

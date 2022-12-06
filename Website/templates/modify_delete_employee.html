@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="POST">
+        <label for="EID">FOR EID:</label>
+        <select id="EID" name='EID'>
+        {% for x in EID %}
+        <option value="{{x[0]}}">{{x[0]}}</option>
+        {% endfor %}
+
+        </select> <br> <br>
+        <br><br>
+
+        <input type="submit" value="DELETE">
+        </form>
+    </body>
+</html>
